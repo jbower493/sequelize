@@ -1,0 +1,21 @@
+
+<div class="menu-container">
+    <h2>
+      Players
+    </h2>
+
+    <div>
+      <ul>
+        {{#each players}}
+            <li>{{this.lastName}}</li>
+        {{/each}}
+      </ul>
+
+      <form action="/player" method="POST">
+        <input name="firstName" type="text" placeholder="First Name">
+        <input name="lastName" type="text" placeholder="Last Name">
+        <button type="submit">Add Player</button>
+      </form>
+    </div>
+  </div>
+</div>
