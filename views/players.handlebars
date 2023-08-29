@@ -14,6 +14,11 @@
       <form action="/player" method="POST">
         <input name="firstName" type="text" placeholder="First Name">
         <input name="lastName" type="text" placeholder="Last Name">
+        <select name="teamId">
+            {{#each teams}}
+                <option value="{{this.id}}">{{this.teamName}}</option>
+            {{/each}}
+        </select>
         <button type="submit">Add Player</button>
       </form>
     </div>
