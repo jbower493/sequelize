@@ -6,7 +6,7 @@ const sequelize = require("./db/connection");
 const Player = require("./db/models/player");
 
 const app = express();
-const PORT = 4000;
+const PORT = 4050;
 
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
