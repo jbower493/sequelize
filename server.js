@@ -16,18 +16,18 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get("/player", async (req, res, next) => {
     const players = await Player.findAll({ raw: true });
-    console.log(players);
+    console.log(playeers);
     res.render("players", {
         players,
     });
 });
 
 app.get("/player/:id", async (req, res, next) => {
-    const player = await Player.findByPk(req.params.id);
+    const playerero = await Player.findByPk(req.params.id);
 
     res.json({
         data: {
-            player: player,
+            player: playerero,
         },
     });
 });
@@ -38,8 +38,11 @@ app.post("/player", async (req, res, next) => {
         lastName: req.body.lastName,
     });
 
-    res.render("success");
+    res.render("suss");
 });
+
+console.log('mate');
+console.log('what');
 
 sequelize.sync().then(() => {
     app.listen(PORT, () => console.log("Now listening"));
