@@ -1,5 +1,4 @@
-const express = require("express");
-const exphbs = require("express-handlebars");
+const mate = 'bob'
 const hbs = exphbs.create({});
 
 const sequelize = require("./db/connection");
